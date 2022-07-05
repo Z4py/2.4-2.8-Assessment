@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+@font-face {
+    font-family: Amstelvar;
+    src: url(Amstelvar-Roman[wdth\,wght\,opsz].ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #FE5F55;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+    font-size: 1.2em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+nav a {
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 40%;
+    left: 10%;
+}
+.overlay h1{
+    font-size: 100px;
+    color: #C6ECAE;
+    text-decoration: underline;
+    font-family: "Dongle";
+    
+}
+
+h3 {
+    color: #D4AA7D;
+    font-size: 30px;
+
+}
+
+video {
+    position: absolute;
+    z-index: 0;   
+    top: 0%; 
+    -webkit-filter: blur(3px) brightness(50%);
+}
+nav .btn {
+    position: absolute;
+    left: 1410px;
+}
+
+.top {
+    min-height: 100vh;
+    background-color: #272727;
+}
+
+.presentation {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 5rem, auto;
+    width: min(90%, 75rem);
+    background-color: #EFD09E;
+}
