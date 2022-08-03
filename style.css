@@ -12,7 +12,7 @@
 }
 
 body {
-    height: 100%;
+    height: 300vh;
 }
 
 a {
@@ -52,20 +52,18 @@ a:hover {
     color: white;
     text-decoration: underline;
     font-family: "Dongle";
-    
 }
 
 h3 {
     color: #6f7788;
     font-size: 20px;
-
 }
 
 video {
     position: absolute;
     z-index: 0;   
     top: 0%; 
-    -webkit-filter: blur(3px) brightness(50%);
+    filter: blur(3px) brightness(50%);
     object-fit: cover;
     width: 100%;
     height: 100vh;
@@ -87,15 +85,16 @@ nav .btn {
     background-color: #272727;
 }
 
-.presentation {
+.menu {
     display: flex;
     justify-content: space-between;
-    background-color: #EFD09E;
     align-items: center;
     text-align: center;
     width: 100%;
     height: 100vh;
+    margin: auto;
 }
+
 
 nav a:first-child {
     margin-right: 1100px;
@@ -107,27 +106,120 @@ nav a:first-child {
 .onebg {
     background-image: url(celestecoverart.png);
     background-size: cover;
-    filter: blur(3px);
+    filter: blur(3px) brightness(50%);
     height: 100%;
+    width: 310px;
     background-position: center;
     background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
 }
 
-.one {
-    height: 100vh;
+.Q:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+    filter: blur(0px) brightness(100%);
+    z-index: 3;
 }
+
 
 .twobg {
     background-image: url(hollowknightbg1.jpg);
     background-size: cover;
-    height: 100vh;
-    -webkit-filter: blur(3px) brightness(50%);
+    filter: blur(3px) brightness(50%);
+    height: 100%;
+    width: 310px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    left: 20%;
 }
 
 .threebg {
     background-image: url(terrariabg1.jpg);
     background-size: cover;
-    height: 100vh;
-    -webkit-filter: blur(3px) brightness(50%);  
+    filter: blur(3px) brightness(50%);
+    height: 100%;
+    width: 310px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    left: 40%;
 }
 
+.fourbg {
+    background-image: url(ultrakillcoverart.jpg);
+    background-size: cover;
+    filter: blur(3px) brightness(50%);
+    height: 100%;
+    width: 310px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    left: 60%;
+}
+
+.fivebg {
+    background-image: url(ror2coverart.jpg);
+    background-size: cover;
+    filter: blur(3px) brightness(50%);
+    height: 100%;
+    width: 310px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    left: 79.5%;
+}
+
+.presentation {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.W {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.S {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.one {
+    position: absolute;
+}
+
+.two {
+    background: aqua;
+}
+
+.three {
+    background: yellowgreen;
+}
+
+.onebgg {
+    filter: blur(2px);
+    background-image: url(celestebg.jpeg);
+    height: 100%;
+}
+
+.twobgg {
+    filter: blur(2px);
+    background-image: url(celestebg2.jpg);
+    height: 100%;
+}
