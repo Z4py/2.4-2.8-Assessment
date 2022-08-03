@@ -12,8 +12,9 @@
 }
 
 body {
-    height: 300vh;
+    height: 100%;
 }
+
 a {
     text-decoration: none;
     color: white;
@@ -77,6 +78,8 @@ nav .btn {
     border-color: white;
     border: solid;
     border-width: 2px;
+    background-color: white;
+    color: black;
 }
 
 .top {
@@ -85,39 +88,46 @@ nav .btn {
 }
 
 .presentation {
-    display: grid;
-    grid-auto-flow: column;
-    margin: 5rem, auto;
-    width: min(90%, 75rem);
+    display: flex;
+    justify-content: space-between;
     background-color: #EFD09E;
-}
-
-nav a:first-child {
-    margin-right: 1100px;
-    margin-left: 20px;
-  }
-
-.presentation {
     align-items: center;
     text-align: center;
     width: 100%;
     height: 100vh;
 }
 
-.one {
+nav a:first-child {
+    margin-right: 1100px;
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+
+
+.onebg {
     background-image: url(celestecoverart.png);
     background-size: cover;
+    filter: blur(3px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.one {
     height: 100vh;
 }
 
-.two {
+.twobg {
     background-image: url(hollowknightbg1.jpg);
     background-size: cover;
     height: 100vh;
+    -webkit-filter: blur(3px) brightness(50%);
 }
 
-.three {
+.threebg {
     background-image: url(terrariabg1.jpg);
     background-size: cover;
     height: 100vh;
+    -webkit-filter: blur(3px) brightness(50%);  
 }
+
