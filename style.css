@@ -20,6 +20,45 @@ a {
     color: white;
 }
 
+a:hover {
+    background-color: whitesmoke;
+    border-radius: 200px;
+    color: black;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 30%;
+    left: 10%;
+}
+.overlay h1{
+    font-size: 200px;
+    color: white;
+    text-decoration: underline;
+    font-family: "Dongle";
+    background: -webkit-linear-gradient(rgb(138, 3, 255), rgb(35, 152, 219));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    color: #d2d9e7;
+    font-size: 30px;
+}
+
+video {
+    position: absolute;
+    z-index: 0;   
+    top: 0%; 
+    filter: blur(3px) brightness(50%);
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
 nav {
     width: 100%;
     font-size: 1.2em;
@@ -33,51 +72,24 @@ nav a {
     font-family: 'Amstelvar';
 }
 
-a:hover {
-    background-color: whitesmoke;
-    border-radius: 200px;
-    color: black;
-}
-
-.overlay {
-    position: absolute;
-    z-index: 1;
-    align-items: center;
-    justify-content: space-between;
-    bottom: 40%;
-    left: 10%;
-}
-.overlay h1{
-    font-size: 100px;
-    color: white;
-    text-decoration: underline;
-    font-family: "Dongle";
-}
-
-h3 {
-    color: #6f7788;
-    font-size: 20px;
-}
-
-video {
-    position: absolute;
-    z-index: 0;   
-    top: 0%; 
-    filter: blur(3px) brightness(50%);
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-}
 nav .btn {
     position: absolute;
-    padding: 10px;
     left: 1400px;
     border-radius: 20px;
-    border-color: white;
     border: solid;
     border-width: 2px;
-    background-color: white;
-    color: black;
+    color: rgb(255, 0, 0);
+}
+
+nav .btn:hover {
+    opacity: 70%;
+    background-color: rgba(255, 0, 0, 0.459);
+}
+
+nav a:first-child {
+    margin-right: 1100px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .top {
@@ -87,32 +99,27 @@ nav .btn {
 
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     width: 100%;
     height: 100vh;
-    margin: auto;
+    margin-bottom: 100vh;
+    background-color: rgb(26,26,26);
 }
-
-
-nav a:first-child {
-    margin-right: 1100px;
-    margin-left: 20px;
-    padding-top: 20px;
-  }
 
 
 .onebg {
     background-image: url(celestecoverart.png);
     background-size: cover;
     filter: blur(3px) brightness(50%);
-    height: 100%;
-    width: 310px;
+    height: 80%;
+    width: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+
     z-index: 0;
+  
 }
 
 .Q:hover {
@@ -127,52 +134,50 @@ nav a:first-child {
     background-image: url(hollowknightbg1.jpg);
     background-size: cover;
     filter: blur(3px) brightness(50%);
-    height: 100%;
-    width: 310px;
+    height: 80%;
+    width: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+ 
     z-index: 0;
-    left: 20%;
+
 }
 
 .threebg {
     background-image: url(terrariabg1.jpg);
     background-size: cover;
     filter: blur(3px) brightness(50%);
-    height: 100%;
-    width: 310px;
+    height: 80%;
+    width: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
+   
     z-index: 0;
-    left: 40%;
+
 }
 
 .fourbg {
     background-image: url(ultrakillcoverart.jpg);
     background-size: cover;
     filter: blur(3px) brightness(50%);
-    height: 100%;
-    width: 310px;
+    height: 80%;
+    width: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
     z-index: 0;
-    left: 60%;
+  
 }
 
 .fivebg {
     background-image: url(ror2coverart.jpg);
     background-size: cover;
     filter: blur(3px) brightness(50%);
-    height: 100%;
-    width: 310px;
+    height: 80%;
+    width: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
     z-index: 0;
-    left: 79.5%;
+   
 }
 
 .presentation {
@@ -198,10 +203,12 @@ nav a:first-child {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 200px;
 }
 
 .one {
-    position: absolute;
+    position: relative;
+    z-index: -100;
 }
 
 .two {
@@ -222,4 +229,9 @@ nav a:first-child {
     filter: blur(2px);
     background-image: url(celestebg2.jpg);
     height: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 50vh;
 }
