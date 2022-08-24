@@ -24,7 +24,7 @@ a {
     color: white;
 }
 
-a:hover {
+.top a:hover {
     background-color: whitesmoke;
     border-radius: 200px;
     color: black;
@@ -109,12 +109,20 @@ nav a:first-child {
     text-align: center;
     width: 100%;
     height: 100vh;
-    margin-bottom: 70vh;
     background-color: rgb(26,26,26);
     scroll-snap-align: start;
 }
 
-
+.whitespace {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(255, 0, 208), rgb(35, 152, 219));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .onebg {
     background-image: url(media/celestecoverart.png);
     background-size: cover;
@@ -124,7 +132,7 @@ nav a:first-child {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
-  
+
 }
 
 .Q:hover {
@@ -134,6 +142,11 @@ nav a:first-child {
     z-index: 3;
 }
 
+.menu a {
+    width: 200px;
+    height: 80%;
+    display: block;
+}
 
 .twobg {
     background-image: url(media/hollowknightbg1.jpg);
@@ -189,7 +202,7 @@ nav a:first-child {
     height: 100vh;
 }
 
-.W {
+.grid-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,24 +237,77 @@ nav a:first-child {
 }
 
 .onebgg {
-    background-image: url(media/test/celestebg1.png);
-    height: 100%;
+    background-image: url(media/test/celestebg2.jpg);
+    height: 110%;
+
+    border: 10px solid black;
+
 }
 
+.reveal  {
+    z-index: 1000;
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 2s all ease;
+    
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.item-1:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.item-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    text-align: center;
+    min-height: 30vh;
+    background-color: white;
+    width: 480px;
+    height: 360px;
+    font-size: 40px;
+    font-family: 'Dongle';
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.item-3 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+
+
 .twobgg {
-    background-image: url(media/test/celestebg2.jpg);
+    background-image: url(media/test/celestecoverart.png);
+    display: flex;
+    justify-content: space-evenly;
     height: 100%;
 }
 
 .threebgg {
-    background-image: url(media/test/hkbg1.png);
+    background-image: url(media/hollowknightbg3.jpg);
     height: 100%;  
 }
 
 .fourbgg {
     background-image: url(media/hollowknightbg3.jpg);
     height: 100%;
-    filter: blur(2px) brightness(50%);
 }
 
 footer {

@@ -23,7 +23,7 @@
     </div>
     <div class="scroll">
         <section class="menu">
-            <div class="Q onebg"></div>
+            <div class="Q onebg"><a href="#funny"></a></div>
 
             <div class="Q twobg"></div>
 
@@ -33,27 +33,48 @@
 
             <div class="Q fivebg"></div>
         </section>
+        <section class="whitespace">
+            <h1>Here are some popular indie titles YOU should try.</h1>
+        </section>
         <section class="presentation">
-            <div class="W onebgg"><h1>hi</h1></div>
-            <div class="S one">
+            <div class="grid-container onebgg" id="funny">
+                <a class="reveal item-1" href="http://www.celestegame.com/">
+                    <img src="media/celestelogo.png" width='360px' alt="">
+                </a>
             </div>
-            <div class="W twobgg"></div>
-            <div class="S two">
+            <div class="grid-container twobgg">
+                <h2 class="griditem reveal item-2">Help Madeline survive her journey to the top of Celeste Mountain in this super-tight, hand-crafted platformer from the creators of TowerFall.</h2>
+                <iframe class='griditem reveal item-3' width="480" height="360" src="https://www.youtube.com/embed/70d9irlxiB4" title="Celeste - Launch Trailer | PS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            </div>
 
-            </div>
-            <div class="W threebgg"></div>
-            <div class="S three">
-
-            </div>
-            <div class="W fourbgg"></div>
-            <div class="S four">
-
-            </div>
-            <div class="W fivebgg"></div>
-            <div class="S five">
-            </div>
+            <div class="grid-container threebgg"></div>
+            <div class="grid-container fourbgg"></div>
+            <div class="grid-container fivebgg"></div>
+          
         </section>
     </div>
-    <footer>FOOTER</footer>
+    
 </body>
+<footer>FOOTER</footer>
 </html>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 100;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+
+      // To check the scroll position on page load
+      reveal();
+</script>
