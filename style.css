@@ -111,18 +111,19 @@ nav a:first-child {
     height: 100vh;
     background-color: rgb(26,26,26);
     scroll-snap-align: start;
+    animation: 5s infinite alternate ease-out breathing-color--dark;
 }
 
 .whitespace {
-    height: 80vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
-    background: -webkit-linear-gradient(rgb(255, 0, 208), rgb(35, 152, 219));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    animation: 5s infinite chroma;
 }
+
+
 .onebg {
     background-image: url(media/celestecoverart.png);
     background-size: cover;
@@ -239,9 +240,6 @@ nav a:first-child {
 .onebgg {
     background-image: url(media/test/celestebg2.jpg);
     height: 110%;
-
-    border: 10px solid black;
-
 }
 
 .reveal  {
@@ -297,22 +295,75 @@ nav a:first-child {
     background-image: url(media/test/celestecoverart.png);
     display: flex;
     justify-content: space-evenly;
-    height: 100%;
+    height: 110%;
 }
 
 .threebgg {
-    background-image: url(media/hollowknightbg3.jpg);
-    height: 100%;  
+    background-image: url(media/test/hollowknightbg4.jpg);
+    height: 110%;  
 }
 
 .fourbgg {
-    background-image: url(media/hollowknightbg3.jpg);
-    height: 100%;
+    background-image: url(media/hollowknightbanner.jpg);
+    display: flex;
+    justify-content: space-evenly;
+    height: 110%;
 }
 
+.fivebgg {
+    background-image: url(media/test/terrariabg.png);
+    height: 110%;
+}
+
+.sixbgg {
+    background-image: url(media/test/terrariabg2.gif);
+    display: flex;
+    justify-content: space-evenly;
+    height: 110%;
+
+}
+
+.sevenbgg {
+    background-image: url(media/ultrakillbg1.jpg);
+    height: 120%;
+}
+
+.eightbgg {
+    background-image: url(media/ultrakillbg2.jpg);
+    display: flex;
+    justify-content: space-evenly;
+    height: 110%;
+}
+
+.ninebgg {
+    background-image: url(media/ror2bg.jpg);
+    height: 120%;
+}
+
+.tenbgg {
+    background-image: url(media/ror2bg1.png);
+    display: flex;
+    justify-content: space-evenly;
+    height: 110%;
+}
 footer {
     width: 100%;
     height: 50vh;
 }
 
+@keyframes breathing-color--dark {
+    from
+    {
+        background-color: black;
+    }
+    to
+    {
+        background-color: hsl(0, 0%, 10%);
+    }
+}
 
+@keyframes chroma {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
