@@ -270,7 +270,7 @@ nav a:first-child {
     min-height: 30vh;
     background-color: white;
     width: 480px;
-    height: 360px;
+    height: auto;
     font-size: 40px;
     font-family: 'Dongle';
     position: relative;
@@ -324,7 +324,7 @@ nav a:first-child {
 }
 
 .sevenbgg {
-    background-image: url(media/ultrakillbg1.jpg);
+    background-image: url(media/test/ultrakillbg1.jpg);
     height: 120%;
 }
 
@@ -332,11 +332,11 @@ nav a:first-child {
     background-image: url(media/ultrakillbg2.jpg);
     display: flex;
     justify-content: space-evenly;
-    height: 110%;
+    height: 120%;
 }
 
 .ninebgg {
-    background-image: url(media/ror2bg.jpg);
+    background-image: url(media/test/ror2bg.jpg);
     height: 120%;
 }
 
@@ -349,6 +349,8 @@ nav a:first-child {
 footer {
     width: 100%;
     height: 50vh;
+    display: grid;
+    background-color: rgb(58, 54, 54);
 }
 
 @keyframes breathing-color--dark {
