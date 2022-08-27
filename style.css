@@ -15,16 +15,12 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    height: 300vh;
-}
-
 a {
     text-decoration: none;
     color: white;
 }
 
-.top a:hover {
+.navlinks a:hover {
     background-color: whitesmoke;
     border-radius: 200px;
     color: black;
@@ -33,8 +29,6 @@ a {
 .overlay {
     position: absolute;
     z-index: 1;
-    align-items: center;
-    justify-content: space-between;
     bottom: 30%;
     left: 10%;
 }
@@ -48,59 +42,83 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-h3 {
+.overlay h3 {
     color: #d2d9e7;
     font-size: 30px;
 }
 
 video {
-    position: absolute;
-    z-index: 0;   
-    top: 0%; 
     filter: blur(3px) brightness(50%);
     object-fit: cover;
     width: 100%;
     height: 100vh;
+    z-index: 0;
 }
 
 nav {
+    position: absolute;
+    background-color: black;
     width: 100%;
     font-size: 1.2em;
     display: flex;
+    justify-content: space-between;
     text-align: center;
-    align-items: center; 
+    align-items: center;
 }
-nav a {
-    padding: 10px;
-    z-index: 1000;
+
+.navlinks {
+    padding: 1rem;
     font-family: 'Amstelvar';
+    z-index: 100; 
+}
+.navlinks ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-nav .btn {
+.navlinks li {
+    list-style: none;
+}
+.home {
+    margin: 1rem;
+    font-family: 'Amstelvar';
+    z-index: 100; 
+}
+
+.home a{
+    padding: 1rem;
+}
+
+.navlinks a {
+    display: block;
+    padding: 1rem;
+}
+
+.home a:hover {
+    background-color: whitesmoke;
+    border-radius: 200px;
+    color: black;
+}
+
+.toggle-button {
     position: absolute;
-    left: 1400px;
-    border-radius: 20px;
-    border: solid;
-    border-width: 2px;
-    color: rgb(255, 0, 0);
+    top: .75rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 1;
 }
 
-nav .btn:hover {
-    opacity: 70%;
-    background-color: rgba(255, 0, 0, 0.459);
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
-
-nav a:first-child {
-    margin-right: 1100px;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.top {
-    min-height: 100vh;
-    background-color: #272727;
-}
-
 
 .menu {
     display: flex;
@@ -110,7 +128,6 @@ nav a:first-child {
     width: 100%;
     height: 100vh;
     background-color: rgb(26,26,26);
-    scroll-snap-align: start;
     animation: 5s infinite alternate ease-out breathing-color--dark;
 }
 
@@ -126,14 +143,6 @@ nav a:first-child {
 
 .onebg {
     background-image: url(media/celestecoverart.png);
-    background-size: cover;
-    filter: blur(3px) brightness(50%);
-    height: 80%;
-    width: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-
 }
 
 .Q:hover {
@@ -141,6 +150,16 @@ nav a:first-child {
     transform: scale(1.1);
     filter: blur(0px) brightness(100%);
     z-index: 3;
+}
+
+.Q {
+    background-size: cover;
+    filter: blur(3px) brightness(50%);
+    height: 80%;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
 }
 
 .menu a {
@@ -151,55 +170,21 @@ nav a:first-child {
 
 .twobg {
     background-image: url(media/hollowknightbg1.jpg);
-    background-size: cover;
-    filter: blur(3px) brightness(50%);
-    height: 80%;
-    width: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
- 
-    z-index: 0;
-
 }
 
 .threebg {
     background-image: url(media/terrariabg1.jpg);
-    background-size: cover;
-    filter: blur(3px) brightness(50%);
-    height: 80%;
-    width: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-
 }
 
 .fourbg {
     background-image: url(media/ultrakillcoverart.jpg);
-    background-size: cover;
-    filter: blur(3px) brightness(50%);
-    height: 80%;
-    width: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-  
 }
 
 .fivebg {
     background-image: url(media/ror2coverart.jpg);
-    background-size: cover;
-    filter: blur(3px) brightness(50%);
-    height: 80%;
-    width: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-   
 }
 
 .presentation {
-    scroll-snap-type: proximity;
     height: 100vh;
 }
 
@@ -212,29 +197,6 @@ nav a:first-child {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.S {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.one {
-    position: absolute;
-    z-index: -100;
-}
-
-.two {
-    background: aqua;
-    position: absolute;
-}
-
-.three {
-    background: yellowgreen;
-    position: absolute;
 }
 
 .onebgg {
@@ -262,15 +224,14 @@ nav a:first-child {
 }
 
 .item-2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
     text-align: center;
     min-height: 30vh;
     background-color: white;
+    border-radius: 24px;
     width: 480px;
-    height: auto;
+    padding: 20px;
+    box-shadow: 0 2px 12px 0 rgb(20 20 43 /100%);
+    max-height: 500px;
     font-size: 40px;
     font-family: 'Dongle';
     position: relative;
@@ -278,73 +239,60 @@ nav a:first-child {
     opacity: 0;
     transition: 2s all ease;
 }
-
 .item-3 {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
     position: relative;
     transform: translateY(100px);
     opacity: 0;
     transition: 2s all ease;
 }
 
-
-
-.twobgg {
-    background-image: url(media/test/celestecoverart.png);
+.grid-container {
     display: flex;
     justify-content: space-evenly;
     height: 110%;
+}
+
+.twobgg {
+    background-image: url(media/test/celestecoverart.png);
+
 }
 
 .threebgg {
     background-image: url(media/test/hollowknightbg4.jpg);
-    height: 110%;  
+ 
 }
 
 .fourbgg {
     background-image: url(media/hollowknightbanner.jpg);
-    display: flex;
-    justify-content: space-evenly;
-    height: 110%;
+
 }
 
 .fivebgg {
     background-image: url(media/test/terrariabg.png);
-    height: 110%;
+
 }
 
 .sixbgg {
     background-image: url(media/test/terrariabg2.gif);
-    display: flex;
-    justify-content: space-evenly;
-    height: 110%;
-
 }
 
 .sevenbgg {
     background-image: url(media/test/ultrakillbg1.jpg);
-    height: 120%;
 }
 
 .eightbgg {
     background-image: url(media/ultrakillbg2.jpg);
-    display: flex;
-    justify-content: space-evenly;
-    height: 120%;
 }
 
 .ninebgg {
     background-image: url(media/test/ror2bg.jpg);
-    height: 120%;
 }
 
 .tenbgg {
     background-image: url(media/ror2bg1.png);
-    display: flex;
-    justify-content: space-evenly;
-    height: 110%;
+}
+.haha {
+    overflow-y: scroll;
 }
 footer {
     width: 100%;
@@ -368,4 +316,88 @@ footer {
     0% { color: red; }
     50% { color: blue; }
     100% { color: red; }
+}
+
+@media (max-width: 400px) {
+    * {
+        margin: 0, auto;
+    }
+    
+    .overlay h1 {
+        font-size: 35px;
+    }
+
+    .overlay h3 {
+        font-size: 10px;
+    }
+
+    nav {
+        background-color: rgba(0, 0, 0, 0.627);
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1000;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .whitespace {
+        margin: 0 auto;
+        display: none;
+        font-size: 20px;
+        width: 20%;
+        
+    }
+    .item-2 {
+        font-size: 17px;
+        line-height: 20px;
+        width: 70%;
+        min-height: 10%;
+    }
+
+    .grid-container img {
+        width: 100%;
+    }
+
+    .grid-container {
+        flex-direction: column;
+        height: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    iframe {
+        width: 50%;
+        height: 30%;
+    }
+    .onebgg img{
+        width: 40%;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navlinks {
+        display: none;
+        width: 100%;
+    }
+    .navlinks ul{ 
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navlinks li a {
+        padding: .5rem 1rem;
+    }
+    .home {
+        display: none;
+    }
+    
+    .navlinks.active {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.503);
+        margin-top: 3rem;
+    }
 }
