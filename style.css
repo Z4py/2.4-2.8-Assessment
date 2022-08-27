@@ -140,11 +140,6 @@ nav {
     animation: 5s infinite chroma;
 }
 
-
-.onebg {
-    background-image: url(media/celestecoverart.png);
-}
-
 .Q:hover {
     transition: 0.3s;
     transform: scale(1.1);
@@ -166,6 +161,9 @@ nav {
     width: 200px;
     height: 80%;
     display: block;
+}
+.onebg {
+    background-image: url(media/celestecoverart.png);
 }
 
 .twobg {
@@ -318,9 +316,9 @@ footer {
     100% { color: red; }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px) {  /*I LOVE MEDIA QUERY SAID NOBODY EVER*/
     * {
-        margin: 0, auto;
+        margin: 0 auto;
     }
     
     .overlay h1 {
