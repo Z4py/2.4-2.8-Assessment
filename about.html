@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f4f1627923.js" crossorigin="anonymous"></script>
     <title>About</title>
 </head>
 <body>
     <nav>
-        <div class="home"><a href="index.html">Home</a></div>
+        <div class="home"><img src="media/icon.png" alt=""></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -24,17 +25,79 @@
         </div>
     </nav>
     <div class="vid"><video src="media/herovideo.mp4" muted loop autoplay></video></div>
-        <div class="overlay">
-            <h1>About Me</h1>
-        </div>
+    <div class="overlay">
+        <h1>About Us</h1>
     </div>
-    <script>        
+    <section class="what">
+        <div class="grid-container about">
+            <h1>Who are we?</h1>
+        </div>
+        <div class="grid-container"> 
+            <h2 class="reveal item-2">Here at GameSite, we act as a gateway for people who are wanting to get into the hobby of gaming.</h2>
+            <img class='reveal aboimg' src="media/aboutbg.jpg" alt="">
+        </div>
+    </section>
+    <script>
         const toggleButton = document.getElementsByClassName('toggle-button')[0]
         const navbarLinks = document.getElementsByClassName('navlinks')[0]
         
         toggleButton.addEventListener('click', () => {
-            navbarLinks.classList.toggle('active')
+          navbarLinks.classList.toggle('active')
         })
+        
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+              var windowHeight = window.innerHeight;
+              var elementTop = reveals[i].getBoundingClientRect().top;
+              var elementVisible = 100;
+              if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+              } else {
+                reveals[i].classList.remove("active");
+              }
+            }
+          }
+    
+          window.addEventListener("scroll", reveal);
+    
+          // To check the scroll position on page load
+          reveal();
     </script>
+    <footer>
+        <section>
+            <div class="socials">
+                <h2>Socials</h2>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="e morelinks">
+                <h2>Gaming Stuff</h2>
+                <ul>
+                    <li><a href="about.html">Steam</a></li>
+                    <li><a href="#top">Epic Games</a></li>
+                    <li><a href="#top">Discord</a></li>
+                    <li><a href="#top">Celeste</a></li>
+                    <li><a href="#top">Hollow Knight</a></li>
+                    <li><a href="#top">Terraria</a></li>
+                    <li><a href="#top">Ultrakill</a></li>
+                    <li><a href="#top">Risk Of Rain 2</a></li>
+                </ul>
+            </div>
+            <div class="e links">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#top">Support</a></li>
+                    <li><a href="#top">Back to top</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>

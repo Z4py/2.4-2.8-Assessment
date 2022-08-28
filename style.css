@@ -42,7 +42,7 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-.overlay h3 {
+.overlay {
     color: #d2d9e7;
     font-size: 30px;
 }
@@ -54,10 +54,12 @@ video {
     height: 100vh;
     z-index: 0;
 }
-
+.home {
+    z-index: 1000;
+    margin: 1.5rem;
+}
 nav {
     position: absolute;
-    background-color: black;
     width: 100%;
     font-size: 1.2em;
     display: flex;
@@ -84,12 +86,6 @@ nav {
 .navlinks a {
     display: block;
     padding: 1rem;
-}
-
-.home a:hover {
-    background-color: whitesmoke;
-    border-radius: 200px;
-    color: black;
 }
 
 .toggle-button {
@@ -129,6 +125,7 @@ nav {
     align-items: center;
     font-size: 40px;
     animation: 5s infinite chroma;
+    background-color: #191819;
 }
 
 .Q:hover {
@@ -154,7 +151,7 @@ nav {
     display: block;
 }
 .onebg {
-    background-image: url(media/celestecoverart.png);
+    background-image: url(media/celestecoverart2.png);
 }
 
 .twobg {
@@ -221,7 +218,6 @@ nav {
 
 .grid-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     background-attachment: fixed;
     background-position: center;
@@ -230,17 +226,43 @@ nav {
     justify-content: space-evenly;
     height: 110%;
 }
+.about {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-size: 100px;
+    background-color: black;
+}
+
+.aa {
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110%;
+    padding: 20px;
+}
+
+.aboimg {
+    width: 50%;
+}
+.desc {
+    font-size: 40px;
+    text-align: center;
+    width: 50%;
+}
 
 .onebgg {
-    background-image: url(media/test/celestebg2.jpg);
+    background-image: url(media/celestebg2.jpg);
 }
 .twobgg {
-    background-image: url(media/test/celestecoverart.png);
-
+    background-image: url(media/celestecoverart.png);
 }
 
 .threebgg {
-    background-image: url(media/test/hollowknightbg4.jpg);
+    background-image: url(media/hollowknightbg4.jpg);
  
 }
 
@@ -250,16 +272,16 @@ nav {
 }
 
 .fivebgg {
-    background-image: url(media/test/terrariabg.png);
+    background-image: url(media/terrariabg.png);
 
 }
 
 .sixbgg {
-    background-image: url(media/test/terrariabg2.gif);
+    background-image: url(media/terrariabg2.gif);
 }
 
 .sevenbgg {
-    background-image: url(media/test/ultrakillbg1.jpg);
+    background-image: url(media/ultrakillbg1.jpg);
 }
 
 .eightbgg {
@@ -267,22 +289,60 @@ nav {
 }
 
 .ninebgg {
-    background-image: url(media/test/ror2bg.jpg);
+    background-image: url(media/ror2bg.jpg);
 }
 
 .tenbgg {
     background-image: url(media/ror2bg1.png);
 }
+
 .haha {
     overflow-y: scroll;
 }
+
 footer {
     width: 100%;
-    height: 50vh;
-    display: grid;
     background-color: rgb(58, 54, 54);
+    position: relative;
+    height: auto;
 }
 
+footer h2 {
+    color: rgb(152, 57, 236);
+    margin-bottom: 10px;
+}
+footer section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 5rem;
+}   
+
+.socials ul {
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.socials a {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.socials h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section a:hover{
+    text-decoration: underline;
+}
+li {
+    list-style: none;
+}
 @keyframes breathing-color--dark {
     from
     {
@@ -306,7 +366,7 @@ footer {
     }
     
     .overlay h1 {
-        font-size: 150px;
+        font-size: 100px;
     }
 
     .overlay h3 {
@@ -324,12 +384,12 @@ footer {
         display: none;
     }
     
-    .whitespace {
-        margin: 0 auto;
+    .home {
         display: none;
-        font-size: 20px;
-        width: 20%;
-        
+    }
+
+    .whitespace {
+        display: none;
     }
     .item-2 {
         font-size: 17px;
@@ -350,7 +410,7 @@ footer {
     }
     
     iframe {
-        width: 50%;
+        width: 70%;
         height: 50%;
     }
 
@@ -374,21 +434,42 @@ footer {
     .navlinks li a {
         padding: .5rem 1rem;
     }
-    .home {
-        display: none;
-    }
+
     
     .navlinks.active {
         display: flex;
         background-color: rgba(0, 0, 0, 0.503);
         margin-top: 3rem;
     }
+    footer {
+        padding: 0px;
+    }
+
+    footer section {
+        grid-template-columns: 1fr
+    }
+    footer a {
+        padding: 3px;
+    }
+
+    .desc{
+        font-size: 20px;
+    }
+
+    .about h1{
+        font-size: 50px;
+    }
+    .about {
+        height: 100%;
+        display: none;
+    }
+
 }
-
-
 
 @media (max-width: 1280px) {
     .whitespace {
         font-size: 200%;
     }
 }
+
+/*I hope my code was so bad that I'm not allowed to write CSS again*/

@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f4f1627923.js" crossorigin="anonymous"></script>
     <title>Support</title>
 </head>
 <body>
     <nav>
+        <div class="home"><img src="media/icon.png" alt=""></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -27,13 +29,73 @@
             <h1>Contact Info</h1>
         </div>
     </div>
-        <script>        
+    <div class="grid-container aa">
+        <ul>
+            <li><h2>For any business enquiries: Johndoe@gmail.com</h2></li>
+            <li><h2>Phone No: 021 234 5678</h2></li>
+        </ul>
+    </div>
+    <footer>
+        <section>
+            <div class="socials">
+                <h2>Socials</h2>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="e morelinks">
+                <h2>Gaming Stuff</h2>
+                <ul>
+                    <li><a href="about.html">Steam</a></li>
+                    <li><a href="#top">Epic Games</a></li>
+                    <li><a href="#top">Discord</a></li>
+                    <li><a href="#top">Celeste</a></li>
+                    <li><a href="#top">Hollow Knight</a></li>
+                    <li><a href="#top">Terraria</a></li>
+                    <li><a href="#top">Ultrakill</a></li>
+                    <li><a href="#top">Risk Of Rain 2</a></li>
+                </ul>
+            </div>
+            <div class="e links">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#top">Support</a></li>
+                    <li><a href="#top">Back to top</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    <script>
         const toggleButton = document.getElementsByClassName('toggle-button')[0]
         const navbarLinks = document.getElementsByClassName('navlinks')[0]
         
         toggleButton.addEventListener('click', () => {
-            navbarLinks.classList.toggle('active')
+          navbarLinks.classList.toggle('active')
         })
+        
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+              var windowHeight = window.innerHeight;
+              var elementTop = reveals[i].getBoundingClientRect().top;
+              var elementVisible = 100;
+              if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+              } else {
+                reveals[i].classList.remove("active");
+              }
+            }
+          }
+    
+          window.addEventListener("scroll", reveal);
+    
+          // To check the scroll position on page load
+          reveal();
+    
     </script>
 </body>
 </html>
