@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="media/icon.png">
     <script src="https://kit.fontawesome.com/f4f1627923.js" crossorigin="anonymous"></script>
     <title>GameSite</title>
 </head>
 <body>
-    <nav id="top">
-        <div class="home"><img src="media/icon.png" alt=""></div>
+    <nav id="top"> <!--Navbar-->
+        <div class="home"><img src="media/icon.png" alt="Logo of GameSite"></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -24,7 +25,7 @@
             </ul>
         </div>
     </nav>
-    <div class="vid"><video src="media/herovideo.mp4" muted loop autoplay></video></div>
+    <div class="vid"><video src="media/herovideo.mp4" muted loop autoplay></video></div> <!--Hero Video-->
     <div class="overlay">
         <h1>Games.</h1>
         <h3>Gaming is an experience.</h3>
@@ -32,7 +33,7 @@
     <section class="whitespace">
         <h1>Here are some indie titles YOU should try.</h1>
     </section>
-    <section class="menu">
+    <section class="menu"> <!--Menu Section-->
         <div class="Q onebg"><a href="#celeste"></a></div>
 
         <div class="Q twobg"><a href="#hk"></a></div>
@@ -43,19 +44,19 @@
 
         <div class="Q fivebg"><a href="#ror"></a></div>
     </section>
-    <section class="presentation">
-        <div class="grid-container onebgg" id="celeste">
+    <section class="presentation"> <!--Presentation Section-->
+        <div class="grid-container onebgg" id="celeste"> <!--First div displays the logo of the game linked to the game's site over a bg image from the game-->
             <a class="reveal item-1" href="http://www.celestegame.com/">
-                <img src="media/celestelogo.png" width='480' alt="">
+                <img src="media/celestelogo.png" width='480' alt="celeste logo">
             </a>
         </div>
-        <div class="grid-container twobgg">
+        <div class="grid-container twobgg"> <!--Second Div displays what the game is about and a gameplay trailer-->
             <h2 class="griditem reveal item-2">Help Madeline survive her journey to the top of Celeste Mountain in this super-tight, hand-crafted platformer from the creators of TowerFall.</h2>
             <iframe class='griditem reveal item-3' width="480" height="360" src="https://www.youtube.com/embed/70d9irlxiB4" title="Celeste - Launch Trailer | PS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
         </div>
         <div class="grid-container threebgg" id="hk">
             <a class="reveal item-1" href="https://www.hollowknight.com/">
-                <img src="media/hkLogo.png" width='480' alt="">
+                <img src="media/hkLogo.png" width='480' alt="hollow knight logo">
             </a>
         </div>
         <div class="grid-container fourbgg"> 
@@ -64,7 +65,7 @@
         </div>
         <div class="grid-container fivebgg" id="terraria">
             <a class="reveal item-1" href="https://terraria.org//">
-                <img src="media/terrariaLogo.png" alt="">
+                <img src="media/terrariaLogo.png" alt="terraria logo">
             </a>
         </div>
         <div class="grid-container sixbgg">
@@ -77,7 +78,7 @@
         </div>
         <div class="grid-container sevenbgg" id="ultrakill">
             <a class="reveal item-1" href="https://store.steampowered.com/app/1229490/ULTRAKILL/">
-                <img src="media/ultrakilllogo.png" width='480' alt="">
+                <img src="media/ultrakilllogo.png" width='480' alt="ultrakill logo">
             </a>
         </div>
         <div class="grid-container eightbgg">
@@ -86,7 +87,7 @@
         </div>
         <div class="grid-container ninebgg" id="ror">
             <a class="reveal item-1" href="https://store.steampowered.com/app/632360/Risk_of_Rain_2/">
-                <img src="media/rorlogo.png" width='520' alt="">
+                <img src="media/rorlogo.png" width='520' alt="risk of rain 2 logo">
             </a>
         </div>
         <div class="grid-container tenbgg">
@@ -122,42 +123,39 @@
           reveal();
     
     </script>
-    <footer>
-        <section>
-            <div class="socials">
-                <h2>Socials</h2>
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-            <div class="e morelinks">
-                <h2>Gaming Stuff</h2>
-                <ul>
-                    <li><a href="about.html">Steam</a></li>
-                    <li><a href="#top">Epic Games</a></li>
-                    <li><a href="#top">Discord</a></li>
-                    <li><a href="#top">Celeste</a></li>
-                    <li><a href="#top">Hollow Knight</a></li>
-                    <li><a href="#top">Terraria</a></li>
-                    <li><a href="#top">Ultrakill</a></li>
-                    <li><a href="#top">Risk Of Rain 2</a></li>
-                </ul>
-            </div>
-            <div class="e links">
-                <h2>Useful Links</h2>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#top">Support</a></li>
-                    <li><a href="#top">Back to top</a></li>
-                </ul>
-            </div>
-        </section>
-    </footer>
+        <footer> <!--Footer-->
+            <section>
+                <div class="socials">
+                    <h2>Socials</h2>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="morelinks"> <!--Site is designed with new gamers in mind. Links to these popular gaming applications may help-->
+                    <h2>Gaming Stuff</h2>
+                    <ul>
+                        <li><a href="about.html">Steam</a></li>
+                        <li><a href="https://store.epicgames.com/en-US/">Epic Games</a></li>
+                        <li><a href="discord.com">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="links"> <!--Maybe for-->
+                    <h2>Useful Links</h2>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="#top">Back to top</a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </section>
+    
 </body>
 
-</section>
+
 </html>
 
